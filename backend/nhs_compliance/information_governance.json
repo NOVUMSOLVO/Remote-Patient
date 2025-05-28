@@ -1,0 +1,19 @@
+{
+  "data_protection": {
+    "gdpr_compliance": true,
+    "lawful_basis": "Article 6(1)(e) - Public task",
+    "special_category_basis": "Article 9(2)(h) - Healthcare",
+    "retention_schedule": "8 years minimum (NHS requirements)"
+  },
+  "data_sharing": {
+    "agreements_required": true,
+    "patient_consent": "Required for non-direct care",
+    "nhs_number_use": "Authorized for patient identification"
+  },
+  "security_classification": {
+    "official": "Standard business information",
+    "official_sensitive": "Personal data requiring protection",
+    "secret": "Not applicable for healthcare data",
+    "top_secret": "Not applicable for healthcare data"
+  }
+}

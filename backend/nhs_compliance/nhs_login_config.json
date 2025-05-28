@@ -1,0 +1,26 @@
+{
+  "client_id": "rpm-system-client",
+  "client_secret": "dev-secret",
+  "redirect_uri": "https://localhost:5000/auth/nhs/callback",
+  "scopes": [
+    "openid",
+    "profile",
+    "email",
+    "phone",
+    "nhs_number",
+    "gp_registration_details"
+  ],
+  "endpoints": {
+    "authorization": "https://api.login.nhs.uk/authorize",
+    "token": "https://api.login.nhs.uk/token",
+    "userinfo": "https://api.login.nhs.uk/userinfo",
+    "jwks": "https://api.login.nhs.uk/.well-known/jwks.json"
+  },
+  "security": {
+    "use_pkce": true,
+    "require_id_token": true,
+    "validate_aud": true,
+    "validate_iss": true,
+    "max_age": 3600
+  }
+}

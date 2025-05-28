@@ -1,0 +1,22 @@
+{
+  "dcb0129": {
+    "title": "Clinical Risk Management: its Application in the Manufacture of Health IT Systems",
+    "status": "planned",
+    "requirements": [
+      "Clinical Risk Management Plan",
+      "Clinical Risk Assessment",
+      "Clinical Risk Register",
+      "Clinical Safety Case"
+    ]
+  },
+  "dcb0160": {
+    "title": "Clinical Risk Management: its Application in the Deployment and Use of Health IT Systems",
+    "status": "planned",
+    "requirements": [
+      "Deployment Risk Assessment",
+      "Ongoing Risk Management",
+      "Safety Monitoring",
+      "Change Control"
+    ]
+  }
+}

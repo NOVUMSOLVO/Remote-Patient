@@ -1,0 +1,19 @@
+{
+  "audit_logs": {
+    "retention_days": 2555,
+    "archive_after_days": 365
+  },
+  "user_sessions": {
+    "retention_days": 90,
+    "cleanup_inactive_days": 30
+  },
+  "patient_data": {
+    "retention_years": 8,
+    "anonymize_after_years": 25
+  },
+  "backup_retention": {
+    "daily_backups_days": 30,
+    "weekly_backups_weeks": 52,
+    "monthly_backups_months": 84
+  }
+}

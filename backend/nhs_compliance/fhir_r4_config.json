@@ -1,0 +1,63 @@
+{
+  "Patient": {
+    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Patient",
+    "required_fields": [
+      "identifier",
+      "name",
+      "telecom",
+      "gender",
+      "birthDate",
+      "address",
+      "managingOrganization"
+    ],
+    "nhs_extensions": [
+      "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-NHSNumberVerificationStatus",
+      "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-EthnicCategory"
+    ]
+  },
+  "Observation": {
+    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Observation",
+    "required_fields": [
+      "status",
+      "category",
+      "code",
+      "subject",
+      "effectiveDateTime",
+      "value"
+    ],
+    "nhs_categories": [
+      "vital-signs",
+      "survey",
+      "exam",
+      "therapy",
+      "activity",
+      "procedure",
+      "laboratory"
+    ]
+  },
+  "Device": {
+    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Device",
+    "required_fields": [
+      "identifier",
+      "status",
+      "manufacturer",
+      "modelNumber",
+      "type",
+      "patient"
+    ]
+  },
+  "Organization": {
+    "profile": "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Organization",
+    "required_fields": [
+      "identifier",
+      "active",
+      "type",
+      "name",
+      "telecom",
+      "address"
+    ],
+    "nhs_identifiers": [
+      "https://fhir.nhs.uk/Id/ods-organization-code"
+    ]
+  }
+}

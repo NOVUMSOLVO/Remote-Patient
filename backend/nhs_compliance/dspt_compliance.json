@@ -1,0 +1,23 @@
+{
+  "mandatory_standards": [
+    "1.1 - Data Security and Protection Policy",
+    "1.2 - Data Security and Protection Training",
+    "1.3 - Data Security and Protection Impact Assessment",
+    "2.1 - Data Flow Mapping",
+    "2.2 - Data Quality",
+    "2.3 - Data Minimisation",
+    "3.1 - Technical Security",
+    "3.2 - End User Device Security",
+    "3.3 - Network Security",
+    "4.1 - Password Policy",
+    "4.2 - Account Management",
+    "4.3 - Privileged User Management",
+    "5.1 - Process Reviews",
+    "5.2 - Response Planning"
+  ],
+  "implementation_status": {
+    "completed": [],
+    "in_progress": [],
+    "not_started": []
+  }
+}

@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom NHS-compliant styles */
+:root {
+  --nhs-blue: #005eb8;
+  --nhs-dark-blue: #003087;
+  --nhs-bright-blue: #0072ce;
+  --nhs-light-blue: #41b6e6;
+  --nhs-aqua-blue: #00a9ce;
+  --nhs-black: #231f20;
+  --nhs-dark-grey: #425563;
+  --nhs-mid-grey: #768692;
+  --nhs-pale-grey: #e8edee;
+  --nhs-white: #ffffff;
+  --nhs-red: #da291c;
+  --nhs-orange: #fa9200;
+  --nhs-warm-yellow: #ffb81c;
+  --nhs-yellow: #fae100;
+  --nhs-green: #009639;
+  --nhs-dark-green: #006747;
+  --nhs-light-green: #78be20;
+  --nhs-purple: #330072;
+  --nhs-dark-pink: #7c2855;
+  --nhs-pink: #ae2573;
+  --nhs-light-pink: #f499be;
+}
+
+/* Base styles */
+body {
+  font-family: 'Frutiger', 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--nhs-black);
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles for accessibility */
+.focus-visible:focus {
+  outline: 3px solid var(--nhs-yellow);
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 2px var(--nhs-black);
+}
+
+/* NHS Button styles */
+.btn-nhs-primary {
+  @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white;
+  background-color: var(--nhs-blue);
+  border: 3px solid var(--nhs-blue);
+}
+
+.btn-nhs-primary:hover {
+  background-color: var(--nhs-dark-blue);
+  border-color: var(--nhs-dark-blue);
+}
+
+.btn-nhs-primary:focus {
+  outline: 3px solid var(--nhs-yellow);
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 2px var(--nhs-black);
+}
+
+.btn-nhs-secondary {
+  @apply inline-flex items-center px-4 py-2 text-sm font-medium rounded-md;
+  background-color: var(--nhs-white);
+  color: var(--nhs-blue);
+  border: 3px solid var(--nhs-blue);
+}
+
+.btn-nhs-secondary:hover {
+  background-color: var(--nhs-pale-grey);
+}
+
+/* NHS Form styles */
+.form-input-nhs {
+  @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm;
+  border: 2px solid var(--nhs-dark-grey);
+}
+
+.form-input-nhs:focus {
+  outline: 3px solid var(--nhs-yellow);
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 2px var(--nhs-black);
+}
+
+/* Status indicators */
+.status-critical {
+  color: var(--nhs-red);
+  background-color: rgba(218, 41, 28, 0.1);
+}
+
+.status-warning {
+  color: var(--nhs-orange);
+  background-color: rgba(250, 146, 0, 0.1);
+}
+
+.status-normal {
+  color: var(--nhs-green);
+  background-color: rgba(0, 150, 57, 0.1);
+}
+
+.status-info {
+  color: var(--nhs-blue);
+  background-color: rgba(0, 94, 184, 0.1);
+}
+
+/* Card styles */
+.card-nhs {
+  @apply bg-white rounded-lg shadow-md;
+  border: 1px solid var(--nhs-pale-grey);
+}
+
+.card-nhs-header {
+  @apply px-6 py-4 border-b;
+  border-color: var(--nhs-pale-grey);
+}
+
+.card-nhs-body {
+  @apply p-6;
+}
+
+/* Navigation styles */
+.nav-link-active {
+  background-color: var(--nhs-blue);
+  color: var(--nhs-white);
+}
+
+.nav-link-inactive {
+  color: var(--nhs-dark-grey);
+}
+
+.nav-link-inactive:hover {
+  background-color: var(--nhs-pale-grey);
+  color: var(--nhs-blue);
+}
+
+/* Table styles */
+.table-nhs {
+  @apply min-w-full divide-y;
+  divide-color: var(--nhs-pale-grey);
+}
+
+.table-nhs th {
+  @apply px-6 py-3 text-left text-xs font-medium uppercase tracking-wider;
+  background-color: var(--nhs-pale-grey);
+  color: var(--nhs-dark-grey);
+}
+
+.table-nhs td {
+  @apply px-6 py-4 whitespace-nowrap text-sm;
+  color: var(--nhs-black);
+}
+
+/* Loading spinner */
+.spinner-nhs {
+  border: 4px solid var(--nhs-pale-grey);
+  border-top: 4px solid var(--nhs-blue);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break-after {
+    page-break-after: always;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --nhs-blue: #000080;
+    --nhs-dark-blue: #000040;
+    --nhs-black: #000000;
+    --nhs-white: #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

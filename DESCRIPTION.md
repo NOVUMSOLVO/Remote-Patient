@@ -1,0 +1,1 @@
+A secure, HIPAA-compliant telehealth platform enabling healthcare providers to remotely monitor patient vital signs in real-time, with automated alerts and secure communication channels. Built with Flask, SQLAlchemy, and modern security practices.

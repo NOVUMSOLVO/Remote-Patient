@@ -1,0 +1,32 @@
+{
+  "verification_date": "2025-05-28T20:08:06.317087",
+  "overall_status": "compliant",
+  "checks": {
+    "nhs_login": {
+      "config_file": "nhs_compliance/nhs_login_config.json",
+      "required": true,
+      "status": "configured"
+    },
+    "pds_integration": {
+      "config_file": "nhs_compliance/pds_config.json",
+      "required": true,
+      "status": "configured"
+    },
+    "fhir_r4": {
+      "config_file": "nhs_compliance/fhir_r4_config.json",
+      "required": true,
+      "status": "configured"
+    },
+    "nhs_number_validation": {
+      "module_file": "nhs_compliance/nhs_number_validator.py",
+      "required": true,
+      "status": "configured"
+    },
+    "information_governance": {
+      "config_file": "nhs_compliance/information_governance.json",
+      "required": true,
+      "status": "configured"
+    }
+  },
+  "recommendations": []
+}
